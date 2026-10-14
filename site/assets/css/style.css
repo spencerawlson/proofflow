@@ -346,3 +346,129 @@ img, svg { max-width: 100%; height: auto; }
   .detail-block { padding: 28px 0; }
   .wrap { padding: 0 18px; }
 }
+
+/* ---------- POD tool (pod-generator.html) ---------- */
+.pod-tool { margin-top: 0; }
+.pod-type-toggle { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.pod-type-card {
+  display: block; border: 1.5px solid var(--border); border-radius: 12px; padding: 16px 14px;
+  cursor: pointer; text-align: center; background: #fff; transition: border-color .15s, background .15s;
+}
+.pod-type-card input { position: absolute; opacity: 0; pointer-events: none; }
+.pod-type-card:has(input:checked) { border-color: var(--green-dark); background: var(--green-light); }
+.pod-type-card:has(input:focus-visible) { outline: 3px solid rgba(22,163,74,.25); }
+.pod-type-name { display: block; font-weight: 800; color: var(--navy); font-size: 1.05rem; margin-bottom: 2px; }
+.pod-type-desc { display: block; font-size: 0.88rem; color: var(--ink-soft); }
+.pod-step-title { display: flex; align-items: center; gap: 12px; margin-top: 36px; margin-bottom: 14px; }
+.pod-step-num {
+  width: 38px; height: 38px; border-radius: 50%; background: var(--green-dark); color: #fff;
+  font-weight: 800; font-size: 1.05rem; display: inline-flex; align-items: center; justify-content: center; flex: 0 0 38px;
+}
+.pod-hint { font-size: 0.93rem; color: var(--ink-soft); margin: 0 0 12px; }
+.pod-photo-btn { display: inline-block; cursor: pointer; }
+.req { color: #B42318; font-weight: 800; }
+.opt { color: var(--ink-soft); font-weight: 400; }
+.field-error { color: #B42318; font-size: 0.9rem; margin: 6px 0 0; font-weight: 600; }
+.pod-errors { background: #FDECEA; border: 1.5px solid #E8A9A3; border-radius: 10px; padding: 16px 18px; margin: 0 0 16px; }
+.pod-errors p { margin: 0 0 6px; color: #8A1F14; }
+.pod-errors ul { margin: 0; padding-left: 1.2em; color: #8A1F14; }
+.pod-previews { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 12px; }
+.pod-previews:empty { display: none; }
+.pod-preview { position: relative; border: 1px solid var(--border); border-radius: 10px; overflow: hidden; background: var(--bg-alt); }
+.pod-preview img { display: block; width: 100%; height: 110px; object-fit: cover; }
+.pod-preview-remove {
+  position: absolute; top: 6px; right: 6px; background: rgba(11,34,57,.82); color: #fff;
+  border: 0; border-radius: 8px; font-size: 0.8rem; font-weight: 700; padding: 7px 10px; cursor: pointer; min-height: 40px;
+}
+.pod-sig {
+  width: 100%; height: 200px; border: 2px dashed #B9C6D2; border-radius: 10px; background: #fff;
+  touch-action: none; cursor: crosshair; display: block;
+}
+.pod-sig-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 10px; flex-wrap: wrap; }
+.pod-signed-by { font-size: 0.93rem; color: var(--ink-soft); font-weight: 600; }
+.pod-stamp-line { font-size: 0.95rem; color: var(--ink-soft); margin: 10px 0 0; font-weight: 600; }
+.pod-generate { width: 100%; margin-top: 6px; }
+.pod-record-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+.pod-record-actions .btn { min-width: 200px; }
+.pod-quota-note { margin-top: 14px; color: #8A1F14; font-weight: 700; }
+.pod-empty { text-align: center; color: var(--ink-soft); margin-top: 20px; }
+
+/* Record document */
+.record-doc {
+  background: #fff; border: 1px solid var(--border); border-radius: 16px; padding: 36px 34px;
+  box-shadow: var(--shadow); max-width: 720px; margin: 28px auto 0; color: var(--ink);
+}
+.record-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 8px; flex-wrap: wrap; }
+.record-id { font-weight: 800; color: var(--navy); font-size: 1.05rem; }
+.record-doctitle { font-weight: 800; color: var(--navy); letter-spacing: 0.1em; font-size: 0.95rem; margin: 4px 0 16px; text-transform: uppercase; }
+.record-rows { border-top: 1px solid var(--border); }
+.record-row { display: flex; gap: 16px; padding: 10px 0; border-bottom: 1px solid var(--border); }
+.record-label { flex: 0 0 180px; font-weight: 700; color: var(--navy); font-size: 0.95rem; }
+.record-value { flex: 1; color: var(--ink); overflow-wrap: anywhere; white-space: pre-wrap; }
+.record-subhead { font-weight: 800; color: var(--navy); margin: 22px 0 10px; font-size: 1rem; }
+.record-grouplabel { font-weight: 700; color: var(--green-dark); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.06em; margin: 14px 0 8px; }
+.record-photos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.record-photo { margin: 0; border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }
+.record-photo img { display: block; width: 100%; height: 150px; object-fit: cover; }
+.record-sig { border: 1.5px solid var(--border); border-radius: 10px; padding: 10px; background: #fff; display: inline-block; max-width: 100%; }
+.record-sig img { display: block; max-height: 90px; max-width: 320px; }
+.record-meta { color: var(--ink-soft); font-size: 0.95rem; margin-bottom: 4px; }
+.record-foot { text-align: center; color: var(--ink-soft); font-size: 0.9rem; margin-top: 26px; padding-top: 16px; border-top: 1px solid var(--border); }
+
+/* Saved records */
+.saved-row {
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px;
+  box-shadow: var(--shadow-sm); margin: 0 auto 12px; max-width: 720px; flex-wrap: wrap;
+}
+.saved-info { flex: 1 1 220px; min-width: 0; }
+.saved-top { display: flex; align-items: center; gap: 10px; margin-bottom: 4px; flex-wrap: wrap; }
+.saved-id { font-weight: 800; color: var(--navy); }
+.type-badge {
+  display: inline-block; background: var(--green-light); color: var(--green-dark);
+  font-size: 0.75rem; font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase;
+  padding: 3px 10px; border-radius: 999px;
+}
+.saved-sub { color: var(--ink-soft); font-size: 0.95rem; overflow-wrap: anywhere; }
+.saved-time { color: var(--ink-soft); font-size: 0.85rem; }
+.saved-actions { display: flex; gap: 10px; }
+.btn-sm { padding: 10px 18px; font-size: 0.92rem; min-height: 44px; }
+
+/* ---------- Print: record only ---------- */
+@media print {
+  .site-header, .site-footer, .no-print { display: none !important; }
+  body { font-size: 13px; background: #fff; }
+  .section { padding: 0; }
+  .wrap { max-width: none; }
+  .record-doc { box-shadow: none; border: 1px solid #bbb; max-width: none; margin: 0; border-radius: 0; }
+  .record-photo img { height: 130px; }
+  a { color: inherit; text-decoration: none; }
+  #record-section { background: #fff; }
+}
+
+/* ---------- POD tool: work-mode step list ---------- */
+#pod-steps { display: grid; gap: 12px; margin-bottom: 14px; }
+#pod-steps:empty { display: none; }
+.pod-step-row { border: 1.5px solid var(--border); border-radius: 12px; padding: 14px; background: #fff; }
+.pod-step-head { display: flex; align-items: center; gap: 10px; }
+.pod-step-label-input {
+  flex: 1; min-width: 0; padding: 12px 14px; border: 1.5px solid var(--border); border-radius: 10px;
+  font: inherit; font-size: 1rem; color: var(--ink); min-height: 48px; background: #fff;
+}
+.pod-step-label-input:focus { outline: 3px solid rgba(22,163,74,.25); border-color: var(--green); }
+.pod-step-remove {
+  background: transparent; border: 1.5px solid #E8A9A3; color: #8A1F14; border-radius: 8px;
+  font-weight: 700; font-size: 0.85rem; padding: 8px 12px; cursor: pointer; min-height: 44px; flex: 0 0 auto;
+}
+.pod-step-body { display: flex; align-items: center; gap: 12px; margin-top: 10px; flex-wrap: wrap; }
+.pod-step-preview { position: relative; border: 1px solid var(--border); border-radius: 10px; overflow: hidden; width: 120px; }
+.pod-step-preview img { display: block; width: 120px; height: 90px; object-fit: cover; }
+#add-step-btn:disabled { opacity: .5; cursor: not-allowed; }
+
+/* Work-mode steps on the record document */
+.record-steps { display: grid; gap: 12px; margin-top: 4px; }
+.record-step { display: flex; gap: 12px; align-items: flex-start; border: 1px solid var(--border); border-radius: 10px; padding: 12px 14px; }
+.record-step-body { flex: 1; min-width: 0; }
+.record-step-label { font-weight: 700; color: var(--navy); margin-bottom: 8px; overflow-wrap: anywhere; }
+.record-step-photo { margin: 0; max-width: 260px; }
+.record-step-photo img { height: 120px; }

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Free Proof of Delivery Generator — ProofFlow</title>
+<meta name="description" content="Create a free proof of delivery in 30 seconds, right in your browser. Snap photos, capture a signature, stamp time and GPS — nothing ever leaves your device.">
+<link rel="canonical" href="https://proofflow.me/pod-generator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ProofFlow">
+<meta property="og:title" content="Free Proof of Delivery Generator — ProofFlow">
+<meta property="og:description" content="Create a free proof of delivery in 30 seconds, right in your browser. Snap photos, capture a signature, stamp time and GPS — nothing ever leaves your device.">
+<meta property="og:url" content="https://proofflow.me/pod-generator.html">
+<meta property="og:image" content="https://proofflow.me/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Free Proof of Delivery Generator — ProofFlow">
+<meta name="twitter:description" content="Create a free proof of delivery in 30 seconds, right in your browser. Snap photos, capture a signature, stamp time and GPS — nothing ever leaves your device.">
+<meta name="twitter:image" content="https://proofflow.me/assets/og-image.png">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;750;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"ProofFlow Proof of Delivery Generator","url":"https://proofflow.me/pod-generator.html","applicationCategory":"BusinessApplication","operatingSystem":"Any (web browser)","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Create free proof-of-delivery records — and proof-of-work records with step-by-step photos — in 30 seconds, right in your browser. No account, no app, nothing ever leaves your device."}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="/" aria-label="ProofFlow home">
+      <svg class="logo-mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#16A34A"/><path d="M18 44c0-10 8-18 18-18h8" fill="none" stroke="#0B2239" stroke-width="4" stroke-linecap="round" stroke-dasharray="1 7"/><circle cx="18" cy="44" r="5" fill="#fff"/><circle cx="46" cy="26" r="5" fill="#0B2239"/><path d="M38 26l7 7 13-13" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>ProofFlow</span>
+    </a>
+    <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Open menu">☰</button>
+    <nav class="main-nav" id="main-nav" aria-label="Main">
+      <a href="/">Home</a>
+      <a href="/features.html">Features</a>
+      <a href="/how-it-works.html">How it works</a>
+      <a href="/pricing.html">Pricing</a>
+      <a href="/pod-generator.html" aria-current="page">Free POD tool</a>
+      <a href="/guides/">Guides</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
+      <span class="nav-cta"><a class="btn btn-on-navy" href="#waitlist">Request early access</a></span>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero no-print">
+    <div class="wrap">
+      <div class="center">
+        <span class="eyebrow">Free tool</span>
+        <h1>Proof of delivery, in 30 seconds.</h1>
+        <p class="lead" style="max-width:52em">No app, no account — fill in the stop, snap the photo, get the signature, and ProofFlow stamps the time and GPS into a clean delivery record you can save or print. And the same flow proves work completed — installations, repairs, cleanings, service calls — with step-by-step photos.</p>
+        <div class="hero-ctas" style="justify-content:center">
+          <a class="btn btn-primary btn-lg" href="#tool">Create a record now</a>
+          <a class="btn btn-outline btn-lg" href="#pod-faq">How private is it?</a>
+        </div>
+        <p class="hero-note">Everything happens in your browser. Your records never leave this device.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="ad-slot no-print" data-ad-position="below-hero"></div>
+
+  <!-- THE TOOL -->
+  <section class="section no-print" id="tool" style="padding-top:56px">
+    <div class="wrap">
+      <div class="form-card pod-tool" style="max-width:720px">
+        <form id="pod-form" novalidate>
+          <!-- Record type -->
+          <div class="field">
+            <span class="field-label" id="rectype-label" style="display:block;font-weight:700;color:var(--navy);margin-bottom:6px;font-size:0.95rem">Record type</span>
+            <div class="pod-type-toggle" role="radiogroup" aria-labelledby="rectype-label">
+              <label class="pod-type-card">
+                <input type="radio" name="record-type" value="delivery" checked>
+                <span class="pod-type-name">Delivery</span>
+                <span class="pod-type-desc">Photo proof of a completed delivery</span>
+              </label>
+              <label class="pod-type-card">
+                <input type="radio" name="record-type" value="work">
+                <span class="pod-type-name">Work completed</span>
+                <span class="pod-type-desc">Step-by-step proof of a finished job</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Step 1 -->
+          <h3 class="pod-step-title"><span class="pod-step-num">1</span> <span id="step1-title">Delivery details</span></h3>
+          <div class="form-grid">
+            <div class="field">
+              <label for="pod-business">Business name <span class="opt">(optional)</span></label>
+              <input id="pod-business" name="business" type="text" autocomplete="organization" placeholder="Dubois Courrier">
+            </div>
+            <div class="form-row-2">
+              <div class="field">
+                <label for="pod-recipient"><span id="lbl-recipient">Recipient name</span> <span class="req" aria-hidden="true">*</span></label>
+                <input id="pod-recipient" name="recipient" type="text" required autocomplete="off" placeholder="Marie Dubois">
+                <p class="field-error" id="err-recipient" hidden></p>
+              </div>
+              <div class="field">
+                <label for="pod-driver"><span id="lbl-driver">Delivered by</span> <span class="opt">(optional)</span></label>
+                <input id="pod-driver" name="driver" type="text" autocomplete="off" placeholder="Driver name">
+              </div>
+            </div>
+            <div class="field">
+              <label for="pod-address"><span id="lbl-address">Delivery address</span> <span class="req" aria-hidden="true">*</span></label>
+              <input id="pod-address" name="address" type="text" required autocomplete="off" placeholder="214 Rue Saint-Paul, Montréal">
+              <p class="field-error" id="err-address" hidden></p>
+            </div>
+            <div class="field">
+              <label for="pod-order"><span id="lbl-order">Order/reference #</span> <span class="opt">(optional)</span></label>
+              <input id="pod-order" name="order" type="text" autocomplete="off" placeholder="#A-88312">
+            </div>
+            <div class="field">
+              <label for="pod-items"><span id="lbl-items">Items delivered</span> <span id="items-req" class="opt">(optional)</span></label>
+              <textarea id="pod-items" name="items" rows="3" placeholder="e.g. 2 parcels, 1 large box"></textarea>
+              <p class="field-error" id="err-items" hidden></p>
+            </div>
+            <div class="field">
+              <label for="pod-notes">Notes <span class="opt">(optional)</span></label>
+              <textarea id="pod-notes" name="notes" rows="2" placeholder="Gate code, where the package was left, damage spotted…"></textarea>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <h3 class="pod-step-title"><span class="pod-step-num">2</span> Photo proof</h3>
+          <div id="photo-group-delivery">
+            <label class="btn btn-outline pod-photo-btn" for="pod-photos-all">Add photos <span class="opt">(up to 3)</span></label>
+            <input type="file" id="pod-photos-all" accept="image/*" capture="environment" multiple hidden>
+            <p class="pod-hint">On phones this opens the camera — or pick from your photo library.</p>
+            <div class="pod-previews" id="preview-all" aria-live="polite"></div>
+          </div>
+          <div id="photo-group-work" hidden>
+            <p class="pod-hint">Add each step of the job, and snap a photo as each step is done — up to 10 steps.</p>
+            <div id="pod-steps" aria-live="polite"></div>
+            <button type="button" class="btn btn-outline" id="add-step-btn">+ Add a step</button>
+          </div>
+
+          <!-- Step 3 -->
+          <h3 class="pod-step-title"><span class="pod-step-num">3</span> Signature</h3>
+          <p class="pod-hint">Ask the <span id="lbl-recipient-lc">recipient</span> to sign with a finger or stylus. Optional, but recommended.</p>
+          <canvas id="pod-sig" class="pod-sig" aria-label="Signature pad"></canvas>
+          <div class="pod-sig-row">
+            <button type="button" class="btn btn-outline" id="sig-clear">Clear</button>
+            <span class="pod-signed-by" id="sig-echo">Signed by: —</span>
+          </div>
+
+          <!-- Step 4 -->
+          <h3 class="pod-step-title"><span class="pod-step-num">4</span> Time &amp; location stamp</h3>
+          <p class="pod-hint">Stamp the exact time — and GPS coordinates, if your device shares them — into the record.</p>
+          <button type="button" class="btn btn-outline" id="stamp-btn">Stamp time &amp; location</button>
+          <p class="pod-stamp-line" id="stamp-line" aria-live="polite">Not stamped yet.</p>
+
+          <!-- Step 5 -->
+          <h3 class="pod-step-title"><span class="pod-step-num">5</span> Generate</h3>
+          <div class="pod-errors" id="pod-errors" role="alert" hidden></div>
+          <button type="button" class="btn btn-primary btn-lg pod-generate" id="generate-btn">Create delivery record</button>
+          <p class="form-note">Records are created and stored only on this device. Nothing is uploaded anywhere.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE RECORD -->
+  <section class="section section-alt" id="record-section" hidden>
+    <div class="wrap">
+      <div class="center no-print">
+        <span class="eyebrow">Done</span>
+        <h2 id="record-heading">Your delivery record</h2>
+      </div>
+      <div class="record-doc" id="record"></div>
+      <div class="center no-print" style="margin-top:24px">
+        <div class="pod-record-actions">
+          <button type="button" class="btn btn-primary" id="print-btn">Print / Save as PDF</button>
+          <button type="button" class="btn btn-outline" id="new-record-btn">Start a new record</button>
+        </div>
+        <p class="pod-quota-note" id="quota-note" hidden>Couldn&rsquo;t save to this device (storage full) — print or save the PDF now.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SAVED RECORDS -->
+  <section class="section no-print" id="saved">
+    <div class="wrap">
+      <div class="center">
+        <span class="eyebrow">On this device</span>
+        <h2>Your records on this device</h2>
+        <p class="lead">Records live only in this browser — clearing browser data deletes them.</p>
+      </div>
+      <div id="saved-list" style="margin-top:28px"></div>
+      <p id="saved-empty" class="pod-empty">No records saved yet. Create your first record above — it will appear here.</p>
+    </div>
+  </section>
+
+  <div class="ad-slot no-print" data-ad-position="mid-content"></div>
+
+  <!-- HOW IT WORKS -->
+  <section class="section section-alt no-print" id="pod-how">
+    <div class="wrap">
+      <div class="center">
+        <span class="eyebrow">How it works</span>
+        <h2>Three steps, zero setup</h2>
+      </div>
+      <div class="steps" style="margin-top:36px">
+        <div class="step"><div class="step-num">1</div><h3>Fill in the stop</h3><p>Recipient or client name, address, order details — the basics that make the record searchable later.</p></div>
+        <div class="step"><div class="step-num">2</div><h3>Capture the proof</h3><p>Snap photos of the drop-off — or each step of the job — and have the customer sign right on screen.</p></div>
+        <div class="step"><div class="step-num">3</div><h3>Stamp it and keep it</h3><p>Time and GPS go on the record automatically. Print it, save the PDF, or keep it on this device.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section no-print" id="pod-faq">
+    <div class="wrap">
+      <div class="center">
+        <span class="eyebrow">Questions</span>
+        <h2>Frequently asked questions</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>Is it really free?</summary>
+          <div class="faq-body"><p>Yes. This generator runs entirely in your browser — no account, no app to install, no limits, no catch.</p></div>
+        </details>
+        <details>
+          <summary>Where does my data go?</summary>
+          <div class="faq-body"><p>Nowhere. Records are created and stored only on your own device — your photos and signature never leave it. If you clear your browser data, your saved records go with it.</p></div>
+        </details>
+        <details>
+          <summary>Does it work offline once loaded?</summary>
+          <div class="faq-body"><p>Once the page is loaded in your browser, the tool keeps working without a connection. Your phone&rsquo;s GPS needs a signal for the location stamp, and nothing is ever sent anywhere either way.</p></div>
+        </details>
+        <details>
+          <summary>Can I use it for my business every day?</summary>
+          <div class="faq-body"><p>That&rsquo;s exactly what it&rsquo;s for — a quick, free way to prove deliveries and completed work. When you&rsquo;re ready for dispatch, routes, and a whole team, the full ProofFlow app is on its way. <a href="#waitlist">Join the early access list</a> and we&rsquo;ll let you know.</p></div>
+        </details>
+        <details>
+          <summary>Can I use it for proof of work, not just deliveries?</summary>
+          <div class="faq-body"><p>Yes — switch the record type to <strong>Work completed</strong> at the top of the tool. You get a step list: describe each step of the job, snap a photo as each one is done, and the record checks the steps off in order. It&rsquo;s built for field service, contractors, cleaners, and installers — get the client&rsquo;s signature and stamp the time and location, same as a delivery.</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- WAITLIST -->
+  <section class="section no-print" id="waitlist">
+    <div class="wrap">
+      <div class="center">
+        <span class="eyebrow">Early access</span>
+        <h2>Be first on the road with ProofFlow</h2>
+        <p class="lead">ProofFlow is being rebuilt from scratch. Join the waitlist and get early access — free — when your fleet&rsquo;s turn comes up.</p>
+      </div>
+      <div class="form-card">
+        <form id="waitlist-form" class="form-grid">
+          <div class="form-row-2">
+            <div class="field">
+              <label for="wl-name">Full name</label>
+              <input id="wl-name" name="name" type="text" required autocomplete="name" placeholder="Marie Dubois">
+            </div>
+            <div class="field">
+              <label for="wl-email">Work email</label>
+              <input id="wl-email" name="email" type="email" required autocomplete="email" placeholder="you@company.com">
+            </div>
+          </div>
+          <div class="form-row-2">
+            <div class="field">
+              <label for="wl-company">Company</label>
+              <input id="wl-company" name="company" type="text" required autocomplete="organization" placeholder="Dubois Courrier">
+            </div>
+            <div class="field">
+              <label for="wl-fleet">Fleet size</label>
+              <select id="wl-fleet" name="fleet">
+                <option value="1-5 drivers">1–5 drivers</option>
+                <option value="6-20 drivers">6–20 drivers</option>
+                <option value="21-50 drivers">21–50 drivers</option>
+                <option value="51+ drivers">51+ drivers</option>
+              </select>
+            </div>
+          </div>
+          <button class="btn btn-primary btn-lg" type="submit">Request early access</button>
+          <p class="form-note">Opens your email app — no account needed. We&rsquo;ll reply to confirm your spot on the list.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="logo" href="/" aria-label="ProofFlow home"><svg class="logo-mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#16A34A"/><path d="M18 44c0-10 8-18 18-18h8" fill="none" stroke="#0B2239" stroke-width="4" stroke-linecap="round" stroke-dasharray="1 7"/><circle cx="18" cy="44" r="5" fill="#fff"/><circle cx="46" cy="26" r="5" fill="#0B2239"/><path d="M38 26l7 7 13-13" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>ProofFlow</span></a>
+        <p>Free proof-of-delivery app and live fleet tracker for delivery businesses. Every delivery, proven.</p>
+      </div>
+      <div>
+        <h4>Product</h4>
+        <ul>
+          <li><a href="/features.html">Features</a></li>
+          <li><a href="/how-it-works.html">How it works</a></li>
+          <li><a href="/pricing.html">Pricing</a></li>
+          <li><a href="/pod-generator.html">Free POD generator</a></li>
+          <li><a href="/#waitlist">Early access</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="/guides/">Guides</a></li>
+          <li><a href="/guides/what-is-proof-of-delivery.html">What is proof of delivery?</a></li>
+          <li><a href="/guides/photo-proof-vs-signature.html">Photo proof vs. signature</a></li>
+          <li><a href="/guides/fleet-tracking-small-delivery-teams.html">Fleet tracking for small teams</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+          <li><a href="/privacy.html">Privacy policy</a></li>
+          <li><a href="/terms.html">Terms of use</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year">2026</span> ProofFlow. All rights reserved.</span>
+      <span>A Montréal-based independent software project.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/site-config.js"></script>
+<script src="/assets/js/main.js"></script>
+<script src="/assets/js/pod-tool.js"></script>
+</body>
+</html>
