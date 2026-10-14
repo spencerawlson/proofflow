@@ -1,0 +1,3 @@
+# ads.txt — ProofFlow (proofflow.me)
+# Google AdSense publisher relationship:
+google.com, pub-7457789518091238, DIRECT, f08c47fec0942fa0

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://proofflow.me/</loc><priority>1.0</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://proofflow.me/features.html</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://proofflow.me/how-it-works.html</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://proofflow.me/pricing.html</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://proofflow.me/guides/</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://proofflow.me/guides/what-is-proof-of-delivery.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://proofflow.me/guides/photo-proof-vs-signature.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://proofflow.me/guides/fleet-tracking-small-delivery-teams.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://proofflow.me/about.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://proofflow.me/contact.html</loc><priority>0.6</priority><changefreq>yearly</changefreq></url>
+  <url><loc>https://proofflow.me/privacy.html</loc><priority>0.4</priority><changefreq>yearly</changefreq></url>
+  <url><loc>https://proofflow.me/terms.html</loc><priority>0.4</priority><changefreq>yearly</changefreq></url>
+</urlset>

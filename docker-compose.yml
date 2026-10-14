@@ -1,0 +1,7 @@
+services:
+  proofflow-web:
+    build: .
+    container_name: proofflow-web
+    ports:
+      - "8093:80"
+    restart: unless-stopped
